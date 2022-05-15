@@ -43,7 +43,8 @@ class Container {
    deleteProductBtId = (id) => {
         const index = this.products.findIndex(p => p.id === id);
 
-        this.products.splice(index, 1);
+        if(index !== -1) this.products.splice(index, 1);
+        else return "El producto no existe";
    }
 
 };
