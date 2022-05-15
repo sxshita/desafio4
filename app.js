@@ -43,7 +43,10 @@ class Container {
    deleteProductById = (id) => {
         const index = this.products.findIndex(p => p.id === id);
 
-        if(index !== -1) this.products.splice(index, 1);
+        if(index !== -1){
+            this.products.splice(index, 1);
+            return "Producto eliminado correctamente";
+        } 
         else return "El producto no existe";
    }
 

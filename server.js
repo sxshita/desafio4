@@ -48,8 +48,8 @@ routerProductos.put('/:id', (req, res) => {
 
 routerProductos.delete('/:id', (req, res) => {
     const id = parseInt(req.params.id);
-    Productos.deleteProductById(id);
-    res.send("Producto eliminado correctamente");
+    const response = Productos.deleteProductById(id);
+    res.send({response});
 });
 
 // -------------------------------------------------------------------
